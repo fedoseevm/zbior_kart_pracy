@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" contant="Maksim Fedoseev">
+    <meta name="keywords" content="HTML, CSS, karty pracy, zbiór kart pracy, strona">
+    <title>NWW i NWD</title>
+    <link rel="icon" type="image/x-icon" href="../media/pics/favicon/favicon.png">
+    <link rel="stylesheet" href="../style-main.css">
+    <!-- Fonts: Ubuntu, Roboto, Dela Gothic One, Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dela+Gothic+One&family=Roboto&family=Source+Sans+Pro:wght@200;400&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Source+Sans+Pro&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!-- booutstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="../media/pics/logo-main1.png" alt="" class="logo">
+            </a>           
+        </div>
+        <a href="../index.html" class="nav-item">main page</a>
+        <div class="dropdown">
+            <a href="../about.html" class="nav-item dropdown-toggle active" id="dd-kartypracy" role="button" data-bs-toggle="dropdown" aria-expanded="false">karty pracy</a>
+            <ul class="dropdown-menu" aria-labelledby="dd-kartypracy">
+                <li><a class="dropdown-item" href="/karty_pracy/kp-1.html">karta pracy 1</a></li>
+                <li><a class="dropdown-item" href="/karty_pracy/kp-2.html">karta pracy 2</a></li>
+                <li><a class="dropdown-item" href="/karty_pracy/kp-3.html">karta pracy 3</a></li>
+                <li><a class="dropdown-item" href="/karty_pracy/kp-6.html">karta pracy 6</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <a href="karty_pracy/kp-1.html" class="nav-item dropdown-toggle" id="dd-another" role="button" data-bs-toggle="dropdown" aria-expanded="false">inne algorytmy</a>
+            <ul class="dropdown-menu" aria-labelledby="dd-another">
+                <li><a class="dropdown-item" href="../inne_alg/listy.html">listy</a></li>
+                <li><a class="dropdown-item" href="../inne_alg/nww_nwd.html">NWW i NWD</a></li>
+            </ul>
+        </div>
+        <a href="../about.html" class="nav-item">about</a>
+        <span class="tag">
+            <!-- <form class="form-inline">
+                <<span class="tag">input</span> class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </span>
+    </nav>
+    <main>
+        <h1 class="header">NWW i NWD</h1>
+        <div class="main">
+            <div class="main-body">
+                <div class="task-block"  id="definition">
+                    <h3 class="task-number">Co to są NWD i NWW?</h3>
+                    <p class="task-description"> NDW - Największy Wspólny Dzielnik dwóch liczb, na przykład: <br>
+                    NWD liczb 18 i 24 jest 4.
+                    <p class="task-description"> NWW - Najmniejsza Wspólna Wielokrotność dwóch liczb, na przykład: <br>
+                        NWW liczb 18 i 24 jest 72.
+                    </p>
+                </div>
+                <div class="task-block"  id="nwd_method_-">
+                    <h3 class="task-number">Algorytm NWD w Python metodą odejmowania</h3>
+                    <p class="task-description"> Ogólnie NWD dwóch liczb możemy obliczyć na 2 sposoby: metodą odejmowania i motodą modulo (reszta z dzielenia).
+                    </p>
+                    <p class="task-description"> Metoda odejmowania:
+                    </p>
+                    <div class="code">
+                        <code>
+                            a, b = <span class="tag">map</span>(<span class="tag">int</span>, <span class="tag">input</span>().split()) <br>
+                            <span class="code-clause">while</span> a != b: <br>
+                            &nbsp;&nbsp; <span class="code-clause">if</span> a > b: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; a = a - b <br>
+                            &nbsp;&nbsp; <span class="code-clause">if</span> b > a: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; b = b - a <br>
+                            <span class="tag">print</span>(f"NWD wprowadzonych liczb = {a}")
+                        </code>
+                    </div>
+                </div>   
+                <div class="task-block"  id="nwd_method_%">
+                    <h3 class="task-number">Algorytm NWD. metoda modulo</h3>
+                    <p class="task-description"> Modulo - reszta z dzielenia. W Pythonie ma znak "%"
+                    <p class="task-description"> Metoda modulo:
+                    </p>
+                    <div class="code">
+                        <code>
+                            a, b = <span class="tag">map</span>(<span class="tag">int</span>, <span class="tag">input</span>().split()) <br>
+                            <span class="code-clause">while</span> b > 0: <br>
+                            &nbsp;&nbsp; a, b = b, a % b <br>
+                            <span class="tag">print</span>(f"NWD wprowadzonych liczb = {a}")
+                        </code>
+                    </div>
+                </div>
+                <div class="task-block"  id="nww">
+                    <h3 class="task-number">Algorytm NWW</h3>
+                    <p class="task-description"> Jest bardziej prosty niż NWD, ale potrzebujemy NWD liczb do obliczenia ich NWW.
+                    </p>
+                    <p class="task-description"> Trzeba zauważyć, że przed obliczeniem NWD wyliczamy iloczyn podanych liczb.
+                    </p>
+                    <div class="code">
+                        <code>
+                            a, b = <span class="tag">map</span>(<span class="tag">int</span>, <span class="tag">input</span>().split()) <br>
+                            iloczyn = a * b <br>
+                            <span class="code-clause">while</span> b > 0: <br>
+                            &nbsp;&nbsp; a, b = b, a % b <br>
+                            nwd = a <br>
+                            nww = iloczyn / nwd <br>
+                            <span class="tag">print</span>(f"NWD wprowadzonych liczb = {nwd}") <br>
+                            <span class="tag">print</span>(f"NWW wprowadzonych liczb = {nww}")
+                        </code>
+                    </div>
+                </div>          
+            </div>
+            <div class="sidenav">
+                <h4 class="sidenav-header">Na tej stronie</h4>
+                <hr id="sidenav-line">
+                <ul class="sidenav-list">
+                    <li><a class="sidenav-item" href="#definition">Definicja NWD i NWW</a></li>
+                    <li><a class="sidenav-item" href="#nwd_method_-">NWD metodą odejmowania</a></li>
+                    <li><a class="sidenav-item" href="#nwd_method_%">NWD metodą modulo</a></li>
+                    <li><a class="sidenav-item" href="#nww">NWW</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-info">
+                <h2 class="footer-header">zbiór kart pracy</h2>
+                <p class="description">Na tej stronie zebrałem wszystkie zadania z kart pracy oraz ciekawe algorytmy z lekcji informatyki wraz z rozwiązaniami i objaśnieniami.</p>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-col">
+                    <h5 class="footer-nav-header" style="text-align: center; font-weight: bold;">nawigacja</h5>
+                    <ul style="padding: 0 0 0 0;">
+                        <li style="list-style-type: none;"><a href="../index.html" class="footer-nav-item">główna</a></li>
+                        <li style="list-style-type: none;"><a href="/karty_pracy/kp-1.html" class="footer-nav-item">karty pracy</a></li>
+                        <li style="list-style-type: none;"><a href="../inne_alg/listy.html" class="footer-nav-item">algorytmy</a></li>
+                        <li style="list-style-type: none;"><a href="../about.html" class="footer-nav-item">about</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h5 class="footer-nav-header" style="text-align: center; font-weight: bold;">kontakt i linki</h5>
+                    <ul style="padding: 0 0 0 0;">
+                        <li style="text-transform: none;list-style-type: none;">
+                            maksim.fedoseev2022@technikum19.edu.pl
+                        </li>
+                        <li style="list-style-type: none;">
+                            <a href="https://www.facebook.com/profile.php?id=100031110731061" class="footer-nav-item" target="_blank">
+                                mój <b>facebook</b>
+                                <img src="../media/pics/facebook-logo.png" width="23vw" style="margin-left: 0.338vw;">
+                            </a>
+                        </li>
+                        <li style="list-style-type: none;">
+                            <a href="https://github.com/infstudy" class="footer-nav-item" target="_blank">
+                                mój <b>github</b>
+                                <img src="../media/pics/github-icon.png" width="22vw" style="margin-left: 1.688vw;">
+                            </a>
+                        </li>
+                        <li style="list-style-type: none;">&ThinSpace;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 70%; margin: auto; height: 2px;color: rgb(185, 185, 185); opacity: 75%;">
+        <div id="copyright">Copyright <span style="font-size: larger;">&copy;</span> 2023 Maksim Fedoseev, uczneń klasy 1E Technikum 19</div>
+    </footer>
+</body>
+</html>
